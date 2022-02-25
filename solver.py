@@ -15,7 +15,7 @@ def cwc(word):
     return score/(wl-len(set(word))+1)
 def input_word():
     while True:
-        word=input("Input the word you entered> ")
+        word=input("Which word did you enter? ")
         if len(word)==wl and word.lower()in wor:break
     return word.lower()
 def mwv(word,wv):
@@ -25,7 +25,7 @@ def mwv(word,wv):
     return True
 def inpres():
     while True:
-        resp=input("Type the color-coded reply from Wordle:\n  G for Green\n  Y for Yellow\n  ? for Gray\nResponse from Wordle> ")
+        resp=input("Type out the response from Wordle:\n  G for Green\n  Y for Yellow\n  ? for Gray\nResponse from Wordle> ")
         if len(resp)==wl and set(resp)<={"G","Y","?"}:break
         else:print(f"Error - invalid answer {resp}")
     return resp
